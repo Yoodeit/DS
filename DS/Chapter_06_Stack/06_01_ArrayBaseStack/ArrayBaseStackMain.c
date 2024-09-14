@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include "Trial_ArrayBaseStack.h"
 
 int main(void)

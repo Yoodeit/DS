@@ -35,7 +35,7 @@ void SPush(Stack * pstack, Data data)
 
 Data SPop(Stack * pstack)
 {
-	if(!SIsEmpty){
+	if(!SIsEmpty(pstack)){
 		Data rdata = pstack->arr[pstack->curPosition];
 		(pstack->curPosition)--;
 		(pstack->numOfData)--;
