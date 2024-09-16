@@ -18,7 +18,7 @@ typedef struct _linkedList
 	Node * cur;
 	Node * before;
 	int numOfData;
-	int (*comp)(LData d1, LData d2);
+	int (*comp)(LData d1, LData d2); //정렬에 쓰임.
 } LinkedList;
 
 
