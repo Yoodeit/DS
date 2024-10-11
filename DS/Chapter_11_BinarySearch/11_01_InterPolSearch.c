@@ -13,8 +13,8 @@ int ISearch(int ar[], int first, int last, int target)
 	//보간 탐색이기 때문에 새로운 탈출조건을 더해주어야 합니다.
 	
 
-	if(ar[first]>target || ar[last]<target)
-		return -1;
+	if(ar[first]>target || ar[last]<target) //보간 탐색은 target값의 예상위치를 기반으로 mid값을 잡기 때문인 이유도 있고
+		return -1; // 무한루프에 빠지게 됨
  
 	// 비례식을 통해 잡는 mid값
 	mid = ((double)(target-ar[first]) / (ar[last]-ar[first]) *
