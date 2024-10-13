@@ -5,16 +5,17 @@
 
 typedef BTData	BSTData;
 
-// BSTÀÇ »ýŒº ¹× ÃÊ±âÈ­
+// BST생성 및 초기화
 void BSTMakeAndInit(BTreeNode ** pRoot);
 
-// ³ëµå¿¡ ÀúÀåµÈ µ¥ÀÌÅÍ ¹ÝÈ¯
+// 노드에 저장된 데이터 반환
 BSTData BSTGetNodeData(BTreeNode * bst);
 
-// BSTžŠ Žë»óÀž·Î µ¥ÀÌÅÍ ÀúÀå(³ëµåÀÇ »ýŒº°úÁ€ Æ÷ÇÔ)
+// BST를 대상으로 데이터 저장(노드의 생성과정 포함)
 void BSTInsert(BTreeNode ** pRoot, BSTData data);
 
-// BSTžŠ Žë»óÀž·Î µ¥ÀÌÅÍ Åœ»ö
+// BST를 대상으로 데이터 탐색
 BTreeNode * BSTSearch(BTreeNode * bst, BSTData target);
 
+//삭제는 나중에 구현...
 #endif

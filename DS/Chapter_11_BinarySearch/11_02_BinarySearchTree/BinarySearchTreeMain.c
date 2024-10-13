@@ -3,10 +3,10 @@
 
 int main(void)
 {
-	BTreeNode * bstRoot;
+	BTreeNode * bstRoot; //BST의 루트 노드 = bstRoot
 	BTreeNode * sNode;    // search node
 
-	BSTMakeAndInit(&bstRoot);
+	BSTMakeAndInit(&bstRoot); // BST 생성 및 초기화
 
 	BSTInsert(&bstRoot, 9);
 	BSTInsert(&bstRoot, 1);
@@ -20,27 +20,27 @@ int main(void)
 
 	sNode = BSTSearch(bstRoot, 1);
 	if(sNode == NULL)
-		printf("Åœ»ö œÇÆÐ \n");
+		printf("탐색 실패 \n");
 	else
-		printf("Åœ»ö¿¡ Œº°øÇÑ Å°ÀÇ °ª: %d \n", BSTGetNodeData(sNode));
+		printf("탐색에 성공한 키의 값: %d \n", BSTGetNodeData(sNode));
 
 	sNode = BSTSearch(bstRoot, 4);
 	if(sNode == NULL)
-		printf("Åœ»ö œÇÆÐ \n");
+		printf("탐색 실패 \n");
 	else
-		printf("Åœ»ö¿¡ Œº°øÇÑ Å°ÀÇ °ª: %d \n", BSTGetNodeData(sNode));
+		printf("탐색에 성공한 키의 값: %d \n", BSTGetNodeData(sNode));
 
 	sNode = BSTSearch(bstRoot, 6);
 	if(sNode == NULL)
-		printf("Åœ»ö œÇÆÐ \n");
+		printf("탐색 실패 \n");
 	else
-		printf("Åœ»ö¿¡ Œº°øÇÑ Å°ÀÇ °ª: %d \n", BSTGetNodeData(sNode));
+		printf("탐색에 성공한 키의 값: %d \n", BSTGetNodeData(sNode));
 
 	sNode = BSTSearch(bstRoot, 7);
 	if(sNode == NULL)
-		printf("Åœ»ö œÇÆÐ \n");
+		printf("탐색 실패 \n");
 	else
-		printf("Åœ»ö¿¡ Œº°øÇÑ Å°ÀÇ °ª: %d \n", BSTGetNodeData(sNode));
+		printf("탐색에 성공한 키의 값: %d \n", BSTGetNodeData(sNode));
 
 	return 0;
 }

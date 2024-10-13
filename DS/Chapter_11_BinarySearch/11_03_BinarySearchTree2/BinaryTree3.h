@@ -26,16 +26,20 @@ void PreorderTraverse(BTreeNode * bt, VisitFuncPtr action);
 void InorderTraverse(BTreeNode * bt, VisitFuncPtr action);
 void PostorderTraverse(BTreeNode * bt, VisitFuncPtr action);
 
-// ¿ÞÂÊ ÀÚœÄ ³ëµå ÁŠ°Å, ÁŠ°ÅµÈ ³ëµåÀÇ ÁÖŒÒ °ªÀÌ ¹ÝÈ¯µÈŽÙ.
+/*
+이 위까지는 BinaryTree2임. 아래부터가 버전업에서 추가된 버전.
+*/
+
+// 왼쪽 자식 노드를 트리에서 제거, 제거된 노드의 주소 값이 반환된다.
 BTreeNode * RemoveLeftSubTree(BTreeNode * bt);
 
-// ¿Àž¥ÂÊ ÀÚœÄ ³ëµå ÁŠ°Å, ÁŠ°ÅµÈ ³ëµåÀÇ ÁÖŒÒ °ªÀÌ ¹ÝÈ¯µÈŽÙ.
+// 오른쪽 자식 노드를 트리에서 제거, 제거된 노드의 주소 값이 반환된다.
 BTreeNode * RemoveRightSubTree(BTreeNode * bt);
 
-// žÞžðž® ŒÒžêÀ» Œö¹ÝÇÏÁö ŸÊ°í mainÀÇ ¿ÞÂÊ ÀÚœÄ ³ëµåžŠ º¯°æÇÑŽÙ. 
+// 메모리 소멸을 수반하지 않고  main의 왼쪽 자식 노드를 변경한다.
 void ChangeLeftSubTree(BTreeNode * main, BTreeNode * sub);
 
-// žÞžðž® ŒÒžêÀ» Œö¹ÝÇÏÁö ŸÊ°í mainÀÇ ¿Àž¥ÂÊ ÀÚœÄ ³ëµåžŠ º¯°æÇÑŽÙ. 
+// 메모리 소멸을 수반하지 않고 main의 오른쪽 자식 노드를 변경한다.
 void ChangeRightSubTree(BTreeNode * main, BTreeNode * sub);
 
 #endif

@@ -77,17 +77,19 @@ void PostorderTraverse(BTreeNode * bt, VisitFuncPtr action)
 	action(bt->data);
 }
 
+// 왼쪽 자식 노드를 트리에서 제거, 제거된 노드의 주소 값이 반환된다.
 BTreeNode * RemoveLeftSubTree(BTreeNode * bt)
 {
 	BTreeNode * delNode;
 
-	if(bt != NULL) {
-		delNode = bt->left;
-		bt->left = NULL;
+	if(bt != NULL) { //bt가 빈 게 아니라면
+		delNode = bt->left; //delNode에 기존좌측서브트리를 담고
+		bt->left = NULL; //NULL로 밀어버림
 	}
-	return delNode;
+	return delNode; //삭제된 노드 반환
 }
 
+// 오른쪽 자식 노드를 트리에서 제거, 제거된 노드의 주소 값이 반환된다.
 BTreeNode * RemoveRightSubTree(BTreeNode * bt)
 {
 	BTreeNode * delNode;
@@ -99,11 +101,13 @@ BTreeNode * RemoveRightSubTree(BTreeNode * bt)
 	return delNode;
 }
 
+// 메모리 소멸을 수반하지 않고  main의 왼쪽 자식 노드를 변경한다.
 void ChangeLeftSubTree(BTreeNode * main, BTreeNode * sub) 
 {
-	main->left = sub;
+	main->left = sub; //걍 받은 main의 left를 새로 받은 sub으로 연결할 뿐.
 }
  
+// 메모리 소멸을 수반하지 않고 main의 오른쪽 자식 노드를 변경한다.
 void ChangeRightSubTree(BTreeNode * main, BTreeNode * sub)
 {
 	main->right = sub;
