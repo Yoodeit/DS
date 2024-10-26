@@ -6,7 +6,6 @@
 
 #include "ALEdge.h"
 
-// Á€Á¡ÀÇ ÀÌž§µéÀ» »óŒöÈ­
 enum {A, B, C, D, E, F, G, H, I, J};
 
 typedef struct _ual
@@ -15,28 +14,28 @@ typedef struct _ual
 	int numE;
 	List * adjList;
 	int * visitInfo;
-	PQueue pqueue;    // °£Œ±ÀÇ °¡ÁßÄ¡ Á€ºž ÀúÀå
+	PQueue pqueue;    // 간선의 가중치 정보 저장
 } ALGraph;
 
-// ±×·¡ÇÁÀÇ ÃÊ±âÈ­
+//그래프의 초기화
 void GraphInit(ALGraph * pg, int nv);
 
-// ±×·¡ÇÁÀÇ ž®ŒÒœº ÇØÁŠ
+// 그래프의 리소스 해제
 void GraphDestroy(ALGraph * pg);
 
-// °£Œ±ÀÇ Ãß°¡
+// 간선의 추가
 void AddEdge(ALGraph * pg, int fromV, int toV, int weight);
 
-// °£Œ±ÀÇ Á€ºž Ãâ·Â
+// 간선의 정보 출력
 void ShowGraphEdgeInfo(ALGraph * pg);
 
-// Depth First Search: Á€Á¡ÀÇ Á€ºž Ãâ·Â
+// Depth First Search: 정점의 정보 출력(DFS기반)
 void DFShowGraphVertex(ALGraph * pg, int startV);
 
-// Å©·çœºÄ® ÃÖŒÒ ºñ¿ë œÅÀå Æ®ž®ÀÇ ±žŒº
+// 최소 비용 신장 트리의 구성
 void ConKruskalMST(ALGraph * pg);
 
-// °£Œ±ÀÇ °¡ÁßÄ¡ Á€ºž Ãâ·Â
+// 가중치 정보 출력
 void ShowGraphEdgeWeightInfo(ALGraph * pg);
 
 #endif
